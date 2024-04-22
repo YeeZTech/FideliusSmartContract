@@ -19,9 +19,7 @@ https://book.getfoundry.sh/
 
 ```shell
 npm install
-forge install foundry-rs/forge-std --no-commit
-forge install vectorized/solady --no-commit
-forge install transmissions11/solmate --no-commit
+forge install
 ```
 
 ### Build

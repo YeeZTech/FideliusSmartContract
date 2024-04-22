@@ -6,12 +6,10 @@ import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 import {DataMarketPlaceInterface} from "../market/interface/DataMarketPlaceInterface.sol";
 import {TokenBankInterface} from "contracts/plugins/eth-contracts/assets/TokenBankInterface.sol";
 import {THPeriodInterface} from "../THPeriodInterface.sol";
-import {Address} from "@chainlink/contracts/src/v0.7/vendor/Address.sol";
 import {AccessControl} from "@openzeppelin/contracts/access/AccessControl.sol";
 
 contract THMiner is THMinerInterface, AccessControl, Ownable {
     bytes32 public constant TRUSTED_ROLE = keccak256("TRUSTED_ROLE");
-    using Address for address;
     DataMarketPlaceInterface public data_market_place;
     TokenBankInterface public token_pool;
     THPeriodInterface public period_contract;

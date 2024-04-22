@@ -5,7 +5,6 @@ import "../onchain/SGXOnChainResult.sol";
 import "../interface/ProgramProxyInterface.sol";
 import "../interface/KeyVerifierInterface.sol";
 import {SignatureVerifier} from "../SignatureVerifier.sol";
-import {Address} from "@chainlink/contracts/src/v0.7/vendor/Address.sol";
 import {SGXRequest} from "../SGXRequest.sol";
 import {SGXStaticData} from "../SGXStaticData.sol";
 import {SGXStaticDataMarketStorage} from "../SGXStaticDataMarketStorage.sol";
@@ -24,7 +23,6 @@ contract SGXVirtualDataImplV1 is SGXStaticDataMarketStorage {
     using SignatureVerifier for bytes32;
     using ECDSA for bytes32;
     using SafeERC20 for IERC20;
-    using Address for address;
 
     constructor() Ownable(msg.sender) {}
 

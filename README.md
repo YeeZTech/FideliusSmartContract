@@ -1,27 +1,24 @@
-## Fidelius Smart Contract
+# Fidelius Smart Contract
 
-This repo containts Ethereum smart contract for [Fidelius](https://github.com/YeeZTech/YeeZ-Privacy-Computing). Fidelius needs a third party to record and verify data exchange transactions, and smart contract is perfect for that.
+This repository contains the Ethereum smart contract for [Fidelius](https://github.com/YeeZTech/YeeZ-Privacy-Computing). Fidelius requires a third party to record and verify data exchange transactions, making a smart contract ideal for this purpose.
 
-There are two main challenges to put the verification process on blockchain. 
-The first challenge is that we cannot put the raw data or encrypted data on blockchain due to the storage size limit of blockchain. The second challenge is that we cannot run complex verification algorithms because of the gas limit.
+Two main challenges arise when incorporating the verification process into the blockchain. Firstly, the storage size limit of the blockchain prevents the direct inclusion of raw or encrypted data. Secondly, complex verification algorithms are hindered by the gas limit.
 
-We involve bunch of cryptographic protocols to overcome these challenges. And the implementation lays in both Fidelius and the smart contract (this repo) sides. 
-We shall open our documentation of these protocols in the future. But you may also check the code for details since the code never lies.
+To tackle these challenges, we employ a variety of cryptographic protocols, implemented in both Fidelius and the smart contract (this repository). While we plan to release documentation on these protocols in the future, you can also refer to the code for details, as code never deceives.
 
-The smart contract is written in Solidity, and is designed to run on Ethereum, or EVM specifically. Theoretically, it should be easy to run it on any EVM compatiable blockchains. Feel free to fire an issue if you have any problem to deploy or run it.
+The smart contract is written in Solidity and is designed to run on Ethereum, specifically the Ethereum Virtual Machine (EVM). In theory, it should be straightforward to deploy on any EVM-compatible blockchain. If you encounter any deployment or runtime issues, please feel free to open an issue.
 
-This repo is still under heavy development. Our customers always have new scenarios, which is quite exciting and challenging for us. We have to support these new requirements, which means we may refactor our code sometimes. Although the code base may be unstable, we always tries our best to do testing.
-
+This repository is still undergoing heavy development. As our customers present new scenarios, we find ourselves faced with exciting and challenging tasks. Adapting to these new requirements may involve occasional code refactoring. Despite the potential instability of the codebase, we always prioritize rigorous testing.
 
 ## Usage
+We utilize [Foundry](https://book.getfoundry.sh/) as our toolchain. Ensure that you have `Foundry` installed, along with `npm`.
 
-### Install dependencies
+### Install Dependencies
 
 ```shell
 npm install
 forge install
 ```
-
 ### Build
 
 ```shell
@@ -54,10 +51,22 @@ $ anvil
 
 ### Deploy
 
-The code base is well modulized, and you may deploy what you needs by writing foundry deployment scripts. 
+Given the modular nature of the codebase, you can deploy specific components by writing Foundry deployment scripts.
 
 ### Cast
 
 ```shell
 $ cast <subcommand>
 ```
+
+## Contribute
+If you wish to contribute to this project, feel free to create an issue on our Issue page (e.g., documentation, new ideas, and proposals).
+
+Don't wait until you're fully prepared to contribute. Here are some TODOs:
+
+- Document the smart contracts.
+- Remove unused code.
+- Provide examples for deploying smart contracts in various scenarios.
+
+## License
+This repo is licensed under [The MIT License](https://opensource.org/license/mit).
